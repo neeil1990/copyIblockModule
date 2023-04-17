@@ -2,7 +2,7 @@
 $MESS ['THEBRAINSE_COPYIBLOCK_MODULE_NAME'] = "Быстрое копирование инфоблоков";
 $MESS ['THEBRAINSE_COPYIBLOCK_MODULE_DESC'] = "Копирование Информационного блока в один клик.";
 $MESS ['THEBRAINSE_COPYIBLOCK_PARTNER_NAME'] = "nBrains";
-$MESS ['THEBRAINSE_COPYIBLOCK_PARTNER_URL'] = "https://nbrains.ru/";
+$MESS ['THEBRAINSE_COPYIBLOCK_PARTNER_URL'] = "https://marketplace.1c-bitrix.ru/solutions/thebrainstech.copyiblock/";
 
 $MESS ['THEBRAINSE_COPYIBLOCK_MODULE_INSTALL'] = "Быстрое копирование инфоблоков";
 $MESS ['THEBRAINSE_COPYIBLOCK_MODULE_UNINSTALL'] = "Быстрое копирование инфоблоков";
