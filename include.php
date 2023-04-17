@@ -6,7 +6,7 @@ global $MESS, $DOCUMENT_ROOT, $APPLICATION;
 CModule::AddAutoloadClasses(
     'thebrainstech.copyiblock',
     array(
-        'Smarty' => 'classes/smarty/libs/Smarty.class.php',
+        'Smarty' => 'vendor/smarty/libs/Smarty.class.php',
         'Events' => 'lib/Events.php',
         'ActionController' => 'lib/ActionController.php',
         'Menu' => 'lib/Menu.php',
