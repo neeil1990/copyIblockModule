@@ -3,7 +3,7 @@ IncludeModuleLangFile(__FILE__);
 
 class Events {
 
-    public function index(&$menu){
+    static public function index(&$menu){
         global $APPLICATION;
         /** @global $USER CUser */
         global $USER;
