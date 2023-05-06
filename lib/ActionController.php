@@ -1,13 +1,21 @@
 <?php
 
+use Bitrix\Main\Application;
+
 class ActionController
 {
     protected $app;
+    protected $smarty;
+    protected $moduleId = "thebrainstech.copyiblock";
 
     public function __construct()
     {
         global $APPLICATION;
         $this->app = $APPLICATION;
+
+        $this->smarty = new Smarty();
+        $this->root = Application::getDocumentRoot();
+        $this->smarty->setTemplateDir($this->root . '/bitrix/modules/'. $this->moduleId .'/templates');
     }
 
     public function menuAction(&$menu)
@@ -38,9 +46,11 @@ class ActionController
 
             $iblock->create();
 
-            echo '<div style="text-align:center;"><p style="font-size: 16px">'. GetMessage('THEBRAINSE_COPYIBLOCK_MODULE_LIB_COPY_END') .'</p><a style="font-size: 20px" href="iblock_edit.php?type=&lang='.LANG.'&ID=&admin=Y">'. GetMessage('THEBRAINSE_COPYIBLOCK_MODULE_LIB_GO_TO_IB') .'</a></div>';
-        }
+            $this->smarty->assign('id', $iblock->IBlockID);
+            $this->smarty->assign('type', $request['TYPE']);
 
-        die();
+            print $this->smarty->fetch('done.tpl');
+        }
+        die;
     }
 }
